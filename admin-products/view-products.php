@@ -45,6 +45,10 @@
                                 </select>
                             </div>
                         </div>
+                        <!--We made this system primarily for the ccs only, so for now the uniforms available is only for the ccs only. We added this button to show that it has room for improvement-->
+                        <div class="page-title-right d-flex align-items-center">
+                            <a id="add-product" href="#" class="btn btn-primary brand-bg-color">Add Product</a>
+                        </div>
                     </div>
 
                     <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">

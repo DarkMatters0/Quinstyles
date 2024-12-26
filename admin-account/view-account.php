@@ -48,8 +48,8 @@ $accounts = $manageAccount->showAll();
                     </div>
 
                     <!-- Table -->
-                    <div class="table-responsive" style="max-height: 400px; overflow-y: auto; max-width: 1000px;">
-                        <table id="table-account" class="table table-centered table-nowrap mb-0">
+                    <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                        <table id="table-account" class="table table-centered table-nowrap mb-0" style="width: 100%; table-layout: fixed;">
                             <thead class="table-light">
                                 <tr>
                                     <th class="text-start">No.</th>
@@ -102,3 +102,4 @@ $accounts = $manageAccount->showAll();
         </div>
     </div>
 </div>
+
