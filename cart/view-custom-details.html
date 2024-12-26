@@ -1,0 +1,54 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdropDetails"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+  data-id=""
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">View Details</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <form id="form-view-details">
+        <div class="modal-body">
+          <label for="name">Uniform Type</label>
+          <input type="text" id="name" name="name" class="form-control" readonly>
+      
+          <label for="gender">Gender</label>
+          <input type="text" id="gender" name="gender" class="form-control" readonly>
+      
+          <label for="chest_measurement">Chest Measurement</label>
+          <input type="text" id="chest_measurement" name="chest_measurement" class="form-control" readonly>
+      
+          <label for="waist_measurement">Waist Measurement</label>
+          <input type="text" id="waist_measurement" name="waist_measurement" class="form-control" readonly>
+      
+          <label for="hip_measurement">Hip Measurement</label>
+          <input type="text" id="hip_measurement" name="hip_measurement" class="form-control" readonly>
+      
+          <label for="shoulder_width">Shoulder Width</label>
+          <input type="text" id="shoulder_width" name="shoulder_width" class="form-control" readonly>
+      
+          <label for="sleeve_length">Sleeve Length</label>
+          <input type="text" id="sleeve_length" name="sleeve_length" class="form-control" readonly>
+      
+          <label for="pant_length">Pant Length</label>
+          <input type="text" id="pant_length" name="pant_length" class="form-control" readonly>
+      
+          <label for="custom_features">Custom Features</label>
+          <textarea id="custom_features" name="custom_features" class="form-control" rows="4" readonly></textarea>
+        </div>
+      </form>
+      

@@ -1,0 +1,51 @@
+:root {
+    --sidebar-bg-color: #8b0000; /* Dark Red Background */
+    --sidebar-menu-item-color: #f5f5f5; /* Light Text Color */
+    --sidebar-menu-hover-color: #ffcccb; /* Lighter Red for Hover */
+    --sidebar-menu-active-color: #ffffff; /* White for Active Link */
+  }
+  
+  .sidebar {
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    position: fixed;
+    min-height: 100vh;
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg-color);
+    transition: all 0.35 ease-in-out;
+  }
+  
+  .sidebar > ul > li > a {
+    color: var(--sidebar-menu-item-color);
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebar > ul > li > a:hover {
+    color: var(--sidebar-menu-hover-color);
+  }
+  
+  .sidebar > ul > li > a.link-active,
+  .sidebar > ul > li > a:focus {
+    color: var(--sidebar-menu-active-color);
+  }
+  
+  .sidebar .nav-link {
+    padding: 10px 10px;
+  }
+  
+  .sidebar i.bi {
+    width: 40px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .sidebar .side-nav-title {
+    color: var(--sidebar-menu-item-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 10px 10px;
+  }
+  

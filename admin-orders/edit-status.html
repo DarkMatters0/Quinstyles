@@ -1,0 +1,54 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdropeditstatus"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+  data-id=""
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Edit Status</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <form action="" method="post" id="form-edit-status">
+        <div class="modal-body">
+
+
+          <div class="mb-2">
+            <label for="status" class="form-label">status</label>
+            <select class="form-select" id="status" name="status" required>
+              <option value="">--Select--</option>
+              <option value="paid">Paid</option>
+              <option value="completed">Completed</option>
+              <option value="claimed">Claimed</option>
+              <option value="refund">Refund</option>
+            </select>
+            <div class="invalid-feedback">status is required.</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="submit" class="btn btn-primary brand-bg-color">
+            Update Status
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="placeOrderModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="placeOrderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="placeOrderModalLabel">Place Your Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="form-place-order-uniform">
+          <div class="modal-body">
+
+  
+            <!-- Gender -->
+            <div class="mb-3">
+              <label for="gender" class="form-label">Gender</label>
+              <select class="form-select" id="gender" name="gender" required>
+                <option value="" disabled selected>--Select Gender--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <div class="invalid-feedback">Please select a gender.</div>
+            </div>
+  
+            <!-- Uniform Type (Hidden) -->
+            <div class="mb-3">
+              <input type="text" class="form-control" id="uniform-type" name="uniform_type" value="Uniform" readonly hidden>
+            </div>
+  
+            <!-- Size -->
+            <div class="mb-3">
+              <label for="size" class="form-label">Size</label>
+              <select class="form-select" id="size" name="size" required>
+                <option value="" disabled selected>--Select Size--</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+              <div class="invalid-feedback">Please select a size.</div>
+            </div>
+  
+            <!-- Quantity -->
+            <div class="mb-3">
+              <label for="quantity" class="form-label">Quantity</label>
+              <input type="number" class="form-control" id="quantity" name="quantity" min="1" value="1" required>
+              <div class="invalid-feedback">Please enter a valid quantity.</div>
+            </div>
+          </div>
+  
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Add to Cart</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

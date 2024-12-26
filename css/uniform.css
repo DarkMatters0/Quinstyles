@@ -1,0 +1,140 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+.shop-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.form-container {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.size-list {
+    margin-bottom: 1rem;
+}
+.size-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.size-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.size-option {
+    border: 1px solid #007bff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    min-width: 50px;
+}
+.size-option.selected {
+    background-color: #007bff;
+    color: white;
+}
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.quantity-control input {
+    width: 50px;
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+.size-title {
+font-weight: bold;
+margin-bottom: 10px;
+font-size: 1.2em;
+}
+
+.size-options {
+display: flex;
+flex-direction: column;
+gap: 20px; /* Increased gap between size groups */
+}
+
+.size-group {
+display: flex;
+flex-direction: column;
+}
+
+.size-label {
+font-weight: bold;
+margin-bottom: 5px;
+font-size: 1em;
+color: #333;
+}
+
+.size-options-row {
+display: flex;
+flex-wrap: wrap; /* Allow options to wrap to the next line if necessary */
+gap: 10px; /* Space between options */
+}
+
+.size-option {
+display: inline-block;
+padding: 5px 10px;
+margin: 2px;
+border: 1px solid #ccc;
+border-radius: 4px;
+cursor: pointer;
+text-align: center;
+background-color: #f9f9f9;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.size-option:hover {
+background-color: #007bff;
+color: #fff;
+}
+
+.size-option.selected {
+background-color: #007bff;
+color: #fff;
+border-color: #0056b3;
+}
