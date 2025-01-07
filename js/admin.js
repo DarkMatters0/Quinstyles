@@ -59,8 +59,8 @@ $(document).ready(function () {
     $("#orders-link").trigger("click"); // Trigger the custom requests click event
   } 
   
-  else if (url.endsWith("order-bin")) {
-    $("#order-bin-link").trigger("click"); // Trigger the custom requests click event
+  else if (url.endsWith("refund")) {
+    $("#refund-link").trigger("click"); // Trigger the custom requests click event
   } 
   
   else if (url.endsWith("account")) {

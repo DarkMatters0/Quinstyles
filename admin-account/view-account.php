@@ -61,40 +61,40 @@ $accounts = $manageAccount->showAll();
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php
-                                $i = 1;
-                                foreach ($accounts as $account) {
-                                    ?>
-                                    <tr>
-                                        <td class="text-start"><?= $i ?></td>
-                                        <td><?= htmlspecialchars($account['username']) ?></td>
-                                        <td><?= htmlspecialchars($account['email']) ?></td>
-                                        <td><?= htmlspecialchars($account['contact']) ?></td>
-                                        <td><?= ucfirst($account['role']) ?></td>
-                                        <td class="text-nowrap">
-                                            <?php 
-                                            // Check if user is an admin
-                                            if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin') { 
-                                            ?>
-                                                <!-- Admin can edit and delete -->
-                                                <a href="" class="btn btn-sm btn-outline-success me-1 edit-account" data-id="<?= $account['id'] ?>">Edit</a>
-                                                <a href="" class="btn btn-sm btn-outline-danger me-1 delete-account" data-id="<?= $account['id'] ?>">Delete</a>
+    <?php
+    $i = 1;
+    foreach ($accounts as $account) {
+        ?>
+        <tr>
+            <td class="text-start"><?= $i ?></td>
+            <td><?= htmlspecialchars($account['username']) ?></td>
+            <td><?= htmlspecialchars($account['email']) ?></td>
+            <td><?= htmlspecialchars($account['contact']) ?></td>
+            <td><?= ucfirst($account['role']) ?></td>
+            <td class="text-nowrap">
+                <?php 
+                // Restrict actions based on the account's role
+                if ($account['role'] === 'admin') { 
+                ?>
+                    <!-- View-only for admin accounts -->
+                    <span class="text-muted">View Only</span>
+                <?php 
+                } else { 
+                ?>
+                    <!-- Edit and delete actions for non-admin roles -->
+                    <a href="" class="btn btn-sm btn-outline-success me-1 edit-account" data-id="<?= $account['id'] ?>">Edit</a>
+                    <a href="" class="btn btn-sm btn-outline-danger me-1 delete-account" data-id="<?= $account['id'] ?>">Delete</a>
+                <?php 
+                }
+                ?>
+            </td>
+        </tr>
+        <?php
+        $i++;
+    }
+    ?>
+</tbody>
 
-                                            <?php 
-                                            } else { 
-                                            ?>
-                                                <!-- View-only for others -->
-                                                <span class="text-muted">View Only</span>
-                                            <?php 
-                                            }
-                                            ?>
-                                        </td>
-                                    </tr>
-                                    <?php
-                                    $i++;
-                                }
-                                ?>
-                            </tbody>
                         </table>
                     </div>
                 </div>

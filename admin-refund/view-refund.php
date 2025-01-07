@@ -48,17 +48,25 @@
                                 $i = 1;
                                 $refundItems = $refundObj->showAll();
 
-                                foreach ($refundItems as $item) {
+                                if (!empty($refundItems)) {
+                                    foreach ($refundItems as $item) {
+                                        ?>
+                                        <tr>
+                                            <td class="text-start"><?= $i ?></td>
+                                            <td><?= $item['order_id'] ?></td>
+                                            <td><?= $item['created_at'] ?></td>
+                                            <td><?= number_format($item['amount'], 2) ?></td>
+                                            <td><?= htmlspecialchars($item['description']) ?></td>
+                                        </tr>
+                                        <?php
+                                        $i++;
+                                    }
+                                } else {
                                     ?>
                                     <tr>
-                                        <td class="text-start"><?= $i ?></td>
-                                        <td><?= $item['order_id'] ?></td>
-                                        <td><?= $item['created_at'] ?></td>
-                                        <td><?= number_format($item['amount'], 2) ?></td>
-                                        <td><?= htmlspecialchars($item['description']) ?></td>
+                                        <td colspan="5" class="text-center">No return items currently.</td>
                                     </tr>
                                     <?php
-                                    $i++;
                                 }
                                 ?>
                             </tbody>
